@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: #fdf4ec;
+}
+
+#splash {
+    position: relative;
+}
+
+.fornavn,
+.efternavn {
+    font-family: helvetica;
+    font-weight: bold;
+    position: absolute;
+}
+
+.fornavn {
+    font-size: 4vw;
+    right: 8vw;
+    top: 2vw;
+}
+
+.efternavn {
+    font-size: 5.5vw;
+    right: 12vw;
+    top: 4vw;
+    color: #e52024;
+
+}
+
+#nav_forside a,
+#nav_forside p{
+    font-family: helvetica;
+    font-size: 1.3vw;
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* unvisited link, a normal link */
+.header nav a:link {
+    color: black;
+}
+
+/* visited link, har besøgt */
+header nav a:visited {
+    color: black;
+}
+
+/* mouse over link, mus over link */
+header nav a:hover {
+    color: #e52024;
+}
+
+/* selected link, the moment it is clicked */
+header nav a:active {
+    color: #e52024;
+}
