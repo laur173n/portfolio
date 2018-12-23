@@ -1,42 +1,90 @@
 body {
-    margin: 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    background-color: #fdf4ec;
+    background-color: #fefaf6;
+    height: 100%;
+    background: linear-gradient(90deg, white 3.2%, #fefaf6 3.2%);
+
 }
 
-#splash {
-    position: relative;
+/*BAGGRUNDEN SPLITTET I 2 https://stackoverflow.com/questions/14739162/two-tone-background-split-by-diagonal-line-using-css*/
+#container {
+  height: 100%;
+  width: 100%;
+position: absolute;
 }
 
+#triangle-topleft {
+  width: 3vw;
+  height: 50vw;
+  border-top: 50vw solid white;
+  border-right: 97vw solid transparent;
+    position: absolute;
+}
+
+/*LOGO*/
 .fornavn,
 .efternavn {
     font-family: helvetica;
     font-weight: bold;
     position: absolute;
+    z-index: 1;
 }
 
 .fornavn {
-    font-size: 4vw;
-    right: 8vw;
-    top: 2vw;
+    font-size: 3vw;
+    right: 7vw;
+    position: absolute;
 }
 
 .efternavn {
-    font-size: 5.5vw;
-    right: 12vw;
+    font-size: 3.8vw;
+    right: 11vw;
     top: 4vw;
     color: #e52024;
+        position: absolute;
+
 
 }
+
+/*LINKS, MENU, NAV*/
 
 #nav_forside a,
 #nav_forside p{
     font-family: helvetica;
-    font-size: 1.3vw;
+    font-size: 1vw;
     position: relative;
     text-decoration: none;
     font-weight: bold;
+        position: absolute;
+    z-index: 2;
+
+}
+
+
+.aboutme_nav{
+    position: absolute;
+    left: 3vw;
+    top: 2vw;
+        width: 100%;
+
+}
+.contact_nav{
+    position: absolute;
+    left: 3vw;
+        top: 6vw;
+
+}
+.portfolio_nav{
+    position: absolute;
+    left: 3vw;
+        top: 25vw;
+
+}
+.year_nav{
+    position: absolute;
+    left: 3vw;
+    top: 42vw;
+        width: 100%;
+
 }
 
 /* unvisited link, a normal link */
@@ -57,4 +105,21 @@ header nav a:hover {
 /* selected link, the moment it is clicked */
 header nav a:active {
     color: #e52024;
+}
+
+/*PORTFOLIO*/
+
+h2 {
+    font-family: helvetica;
+    position: absolute;
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+.tema1_grundlæggendehtml{
+    top: 52vw;
+    left: 6vw;
+    position: absolute;
+    width: 100%;
+
 }
