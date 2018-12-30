@@ -17,7 +17,7 @@ position: absolute;
   height: 50vw;
   border-top: 50vw solid white;
   border-right: 97vw solid transparent;
-    position: absolute;
+position: absolute;
 }
 
 /*LOGO*/
@@ -40,7 +40,7 @@ position: absolute;
     right: 11vw;
     top: 4vw;
     color: #e52024;
-        position: absolute;
+    position: absolute;
 
 
 }
@@ -51,10 +51,9 @@ position: absolute;
 #nav_forside p{
     font-family: helvetica;
     font-size: 1vw;
-    position: relative;
     text-decoration: none;
     font-weight: bold;
-        position: absolute;
+    position: absolute;
     z-index: 2;
 
 }
@@ -87,6 +86,24 @@ position: absolute;
 
 }
 
+.nav_back a{
+    font-family: helvetica;
+    font-size: 1vw;
+    text-decoration: none;
+    font-weight: bold;
+    position: absolute;
+    z-index: 2;
+    transform: rotate(270deg);
+    top: 4vw;
+}
+
+.nav_back img{
+    width: 2vw;
+    position: absolute;
+left: 3vw;
+    top: -0.2vw;
+
+}
 /* unvisited link, a normal link */
 .header nav a:link {
     color: black;
@@ -107,19 +124,43 @@ header nav a:active {
     color: #e52024;
 }
 
-/*PORTFOLIO*/
-
-h2 {
-    font-family: helvetica;
-    position: absolute;
-    font-size: 1vw;
-    font-weight: bold;
+/*PORTFOLIO 1*/
+.portfolio1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 4vw;
 }
 
-.tema1_grundlæggendehtml{
-    top: 52vw;
-    left: 6vw;
-    position: absolute;
-    width: 100%;
+.billede1 img{
+    flex-basis: 100px;
+    flex-grow: 1;
+    width: 40vw;
+    margin: 2vw;
+    filter: grayscale(100%);
+}
 
+.tekst1 {
+    flex-basis: 100px;
+    flex-grow: 1;
+    font-family: helvetica;
+    font-size: 1vw;
+    text-decoration: none;
+        margin: 2vw;
+}
+
+.tal1{
+    font-family: helvetica;
+    font-size: 11vw;
+    text-decoration: none;
+    position: absolute;
+    color: #e52024;
+    left: 5vw;
+    top: 0vw;
+    z-index: 30
+}
+
+.overskrift{
+    font-weight: bold;
+    font-size: 1.2vw;
 }
