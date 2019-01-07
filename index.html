@@ -7,52 +7,64 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laura Villumsen</title>
+    <title>LAURA VILLUMSEN</title>
 
     <!--    indsæt ikon her-->
+    <!--https://stackoverflow.com/questions/9943771/adding-a-favicon-to-a-static-html-page-->
+
+    <link rel="shortcut icon" type="image/png" href="pics/favicon.png" />
+
 
 </head>
 
 <body>
 
+    <div id="container">
+        <div id="triangle-topleft"></div>
+    </div>
 
-    <!--    <div class="loader">Loading...</div>-->
 
-    <section id="splash">
 
-        <header>
+    <header>
 
-            <nav id="nav_forside">
-                <div class="aboutme_nav"><a href="aboutme.html">About me</a></div>
-                <div class="contact_nav"><a href="contact.html">Contact</a></div>
-                <div class="portfolio_nav"><a href="portfolio.html">Portfolio</a></div>
-                <div class="year_nav">
-                    <p>2018 - </p>
-                </div>
-            </nav>
-            <div class="fornavn">
-                <h1>LAURA</h1>
-            </div>
-            <div class="efternavn">
-                <h1>VILLUMSEN</h1>
-            </div>
+        <nav>
+            <div id="menuknap" class="hide-on-desktop"><img src="UI/menu.png" alt="Menuknap"></div>
+            <ul id="menu" class="hidden">
+                <li class="hide-on-desktop"><a href="index.html">Forside</a></li>
+                <li><a href="aboutme.html">About me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!--                    <li><a href="cv.html">CV</a></li>-->
+                <li><a href="tema.html">Portfolio</a></li>
+            </ul>
+        </nav>
 
-            <div id="container">
-                <div id="triangle-topleft"></div>
-            </div>
+        <a href="index.html" class="logo">
 
-        </header>
-    </section>
+            <h1 class="fornavn">LAURA</h1>
+
+
+            <h1 class="efternavn">VILLUMSEN</h1>
+
+
+        </a>
+
+    </header>
+
+    <div id="splash_pic">
+        <img src="pics/splash2.png" alt="billede">
+    </div>
+
 
 
     <footer>
 
+        LAURA VILLUMSEN TABORYSKI, +4530118674, MULTIMEDIEDESIGN PÅ KØBENHAVNS ERHVERVSAKADEMI
+
     </footer>
 
-
+    <script src="script.js"></script>
 
 </body>
-
 
 
 

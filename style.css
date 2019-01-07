@@ -1,110 +1,112 @@
 body {
-    background-color: #fefaf6;
-    height: 100%;
+    background-color: #fdf4ec;
+    height: 100vh;
     background: linear-gradient(90deg, white 3.2%, #fefaf6 3.2%);
+    margin: 0;
 
+}
+
+header {
+    height: 0;
+}
+
+.main {
+    margin-top: 28vw;
+}
+
+footer {
+    font-family: helvetica;
+    font-size: 1.7vw;
+    text-align: center;
 }
 
 /*BAGGRUNDEN SPLITTET I 2 https://stackoverflow.com/questions/14739162/two-tone-background-split-by-diagonal-line-using-css*/
 #container {
-    height: 100%;
     width: 100%;
-    position: absolute;
+    position: fixed;
+    z-index: -1;
 }
 
 #triangle-topleft {
     width: 3vw;
-    height: 50vw;
-    border-top: 50vw solid white;
-    border-right: 97vw solid transparent;
-    position: absolute;
+    height: 50%;
+    border-top: 27vw solid white;
+    border-right: 98vw solid transparent;
+    position: fixed;
+    margin-top: -15px;
 }
+
+#body {
+    height: 100%;
+}
+
 
 /*LOGO*/
-.fornavn,
-.efternavn {
+
+h1 {
     font-family: helvetica;
     font-weight: bold;
-    position: absolute;
-    z-index: 1;
-}
+    font-size: 4.3vw;
+    display: inline-block;
+    margin: 0 -3px;
+    cursor: pointer;
 
-.fornavn {
-    font-size: 3vw;
-    right: 7vw;
-    position: absolute;
 }
 
 .efternavn {
-    font-size: 3.8vw;
-    right: 11vw;
-    top: 4vw;
     color: #e52024;
+}
+
+.logo {
     position: absolute;
-
-
+    top: 3.6vw;
+    left: 53vw;
+    text-decoration: none;
+    color: black;
 }
 
 /*LINKS, MENU, NAV*/
-
-#nav_forside a,
-#nav_forside p {
-    font-family: helvetica;
-    font-size: 1vw;
-    text-decoration: none;
-    font-weight: bold;
-    position: absolute;
-    z-index: 2;
-
+.hidden {
+    transform: scale(0);
 }
 
+#menuknap {
+    display: inline-block;
+    width: 11vw;
+    margin-top: 1.6vw;
+}
 
-.aboutme_nav {
-    position: absolute;
-    left: 3vw;
-    top: 2vw;
+#menuknap img {
     width: 100%;
-
 }
 
-.contact_nav {
+#menu {
+    list-style-type: none;
+    transition: transform 1s;
+    transform-origin: top left;
+    font-family: helvetica;
+    font-size: 3vw;
+    font-weight: bold;
+    line-height: 15vw;
     position: absolute;
-    left: 3vw;
     top: 6vw;
+    background-color: white;
+    z-index: 100;
+
 
 }
 
-.portfolio_nav {
-    position: absolute;
-    left: 3vw;
-    top: 25vw;
-
-}
-
-.year_nav {
-    position: absolute;
-    left: 3vw;
-    top: 42vw;
-    width: 100%;
-
-}
-
-.nav_back a {
-    font-family: helvetica;
-    font-size: 1vw;
+#menu a {
     text-decoration: none;
-    font-weight: bold;
-    position: fixed;
-    z-index: 2;
-    transform: rotate(270deg);
-    top: 4vw;
+    padding-right: 3vw;
+    cursor: pointer;
+
 }
 
-.nav_back img {
-    width: 2vw;
-    position: fixed;
-    left: 3vw;
-    top: -0.2vw;
+
+.temaer a {
+    text-decoration: none;
+    cursor: pointer;
 
 }
 
@@ -129,267 +131,370 @@ header nav a:active {
 }
 
 
-/*PORTFOLIO 1*/
-.portfolio1 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 4vw;
+/*FORSIDE*/
+
+#splash_pic img {
+    width: 100%;
 }
 
-.billede1 img {
-    flex-basis: 100px;
-    flex-grow: 1;
-    width: 40vw;
-    margin: 2vw;
+#splash_pic {
+    margin-top: 17vw;
 }
 
-.tekst1 {
-    flex-basis: 100px;
-    flex-grow: 1;
+/*TEMA GALLERY*/
+
+.portfolio_overskrift {
     font-family: helvetica;
-    font-size: 1.1vw;
-    text-decoration: none;
-    margin: 2vw;
-}
-
-.tal1 {
-    font-family: helvetica;
-    font-size: 11vw;
-    text-decoration: none;
-    position: absolute;
-    color: #e52024;
-    left: 5vw;
-    top: 0vw;
-    z-index: 30
-}
-
-.overskrift {
     font-weight: bold;
-    font-size: 1.2vw;
+    font-size: 3.5vw;
+    width: 100%;
+    text-align: center;
 }
 
-/*PORTFOLIO 2*/
-
-.portfolio2 {
+.gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 4vw;
+    margin: 5vw 4vw 4vw 4vw;
+    justify-content: space-between;
 }
 
-.billede2 video {
-    flex-basis: 100px;
+.gallery a {
+    flex-basis: 250px;
     flex-grow: 1;
-    width: 40vw;
-    margin: 2vw;
 }
 
-.tekst2 {
-    flex-basis: 100px;
-    flex-grow: 1;
-    font-family: helvetica;
-    font-size: 1.1vw;
-    text-decoration: none;
-    margin: 2vw;
-    text-align: right;
+.tema1 {
+    /*    height: 100%;*/
+    margin: 1vw;
+    position: relative;
+
 }
 
-.tal2 {
-    font-family: helvetica;
-    font-size: 11vw;
-    text-decoration: none;
+.tema1 img {
+    width: 100%;
+}
+
+/*OVERLAY*/
+.image_tema1 {
+    width: 100%
+}
+
+.overlay {
     position: absolute;
-    color: #e52024;
-    left: 85vw;
-    top: 29vw;
-    z-index: 30
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
 }
 
-/*PORTFOLIO 3*/
+.tema1:hover .overlay {
+    opacity: 1;
+}
 
-.portfolio3 {
+.overlay_text {
+    color: white;
+    font-size: 20px;
+    font-family: helvetica;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+/*PORTFOLIO ALL*/
+
+.overskrift_portfolio {
+    margin-top: 30vw;
+}
+
+.overskrift_portfolio,
+.underoverskfit_portfolio {
+    font-family: helvetica;
+    font-weight: bold;
+    margin-left: 6vw;
+}
+
+.underoverskfit_portfolio a {
+    color: #e52024;
+    text-decoration: underline;
+}
+
+/* unvisited link, a normal link */
+.underoverskfit_portfolio a:link {
+    color: #e52024;
+}
+
+/* visited link, har besøgt */
+.underoverskfit_portfolio a:visited {
+    color: #e52024;
+}
+
+/* mouse over link, mus over link */
+.underoverskfit_portfolio a:hover {
+    color: black;
+}
+
+/* selected link, the moment it is clicked */
+.underoverskfit_portfolio a:active {
+    color: #e52024;
+}
+
+.tekst {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 4vw;
-}
-
-.billede3 img {
-    flex-basis: 100px;
-    flex-grow: 1;
-    width: 40vw;
-    margin: 2vw;
-}
-
-.tekst3 {
-    flex-basis: 100px;
-    flex-grow: 1;
+    margin: 6vw;
+    text-align: left;
     font-family: helvetica;
-    font-size: 1.1vw;
-    text-decoration: none;
-    margin: 2vw;
+    line-height: 5vw;
 }
 
-.tal3 {
-    font-family: helvetica;
-    font-size: 11vw;
-    text-decoration: none;
-    position: absolute;
-    color: #e52024;
-    left: 13vw;
-    top: 80vw;
-    z-index: 30;
+.billede {
+    margin: 6vw;
 }
 
-/*PORTFOLIO 4*/
-
-.portfolio4 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 4vw;
+.billede img {
+    width: 100%;
 }
 
-.billede4 img {
-    flex-basis: 100px;
-    flex-grow: 1;
-    width: 40vw;
-    margin: 2vw;
+.billede video {
+    width: 100%;
+    height: 100%;
 }
 
-.tekst4 {
-    flex-basis: 100px;
-    flex-grow: 1;
-    font-family: helvetica;
-    font-size: 1.1vw;
-    text-decoration: none;
-    margin: 2vw;
-    text-align: right;
-
-}
-
-.tal4 {
-    font-family: helvetica;
-    font-size: 11vw;
-    text-decoration: none;
-    position: absolute;
-    color: #e52024;
-    left: 81vw;
-    top: 86vw;
-    z-index: 30;
-}
-
-/*PORTFOLIO 5*/
-
-.portfolio5 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 4vw;
-}
-
-.billede5 img {
-    flex-basis: 100px;
-    flex-grow: 1;
-    width: 40vw;
-    margin: 2vw;
-}
-
-.tekst5 {
-    flex-basis: 100px;
-    flex-grow: 1;
-    font-family: helvetica;
-    font-size: 1.1vw;
-    text-decoration: none;
-    margin: 2vw;
-
-}
-
-.tal5 {
-    font-family: helvetica;
-    font-size: 11vw;
-    text-decoration: none;
-    position: absolute;
-    color: #e52024;
-    left: 9vw;
-    top: 123vw;
-    z-index: 30;
-}
-
-/*PORTFOLIO 6*/
-
-.portfolio6 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 4vw;
-}
-
-.billede6 img {
-    flex-basis: 100px;
-    flex-grow: 1;
-    width: 40vw;
-    margin: 2vw;
-}
-
-.tekst6 {
-    flex-basis: 100px;
-    flex-grow: 1;
-    font-family: helvetica;
-    font-size: 1.1vw;
-    text-decoration: none;
-    margin: 2vw;
-    text-align: right;
-
-}
-
-.tal6 {
-    font-family: helvetica;
-    font-size: 11vw;
-    text-decoration: none;
-    position: absolute;
-    color: #e52024;
-    left: 9vw;
-    top: 123vw;
-    z-index: 30;
-}
 
 /*ABOUT ME*/
+
+.about_overskrift {
+    width: 100%;
+    text-align: center;
+}
 
 .about,
 .me {
     font-family: helvetica;
     font-weight: bold;
-    position: absolute;
-    z-index: 1;
     font-size: 3.5vw;
-}
-
-.about {
-    left: 34vw;
-    top: 4vw;
-    position: absolute;
-}
-
-.me {
-    left: 51.7vw;
-    top: 9vw;
-    position: absolute;
+    display: inline-block;
 }
 
 .selfie img {
-    width: 40vw;
-    position: absolute;
-    top: 20vw;
-    left: 52vw;
+    width: 90%;
+    margin: 4vw;
+}
+
+.about_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.selfie {
+    flex-basis: 300px;
+    flex-grow: 1;
 }
 
 .about_tekst {
-    position: absolute;
-    width: 40vw;
+    flex-basis: 300px;
+    flex-grow: 1;
+    text-align: justify;
+    margin: 2vw 10vw;
     font-family: helvetica;
-    font-size: 1.5vw;
-    top: 15vw;
-    left: 10vw;
+}
+
+
+/*CONTACT*/
+
+.contact {
+    font-family: helvetica;
+    font-weight: bold;
+    font-size: 3.5vw;
+    width: 100%;
+    text-align: center;
+}
+
+.contact_tekst {
+    font-family: helvetica;
+    font-size: 3vw;
+    text-align: center;
+}
+
+.contact_tekst a {
+    margin: 1.5vw;
+    text-decoration: none;
+}
+
+.contact_tekst a img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.upperpart_contact a {
+    margin: 0;
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/*MEDIAQUERY*/
+
+@media only screen and (min-width: 769px) {
+
+
+    #menuknap {
+        display: none;
+    }
+
+    /* center logo:   https://robots.thoughtbot.com/positioning*/
+    .logo {
+        position: absolute;
+        left: 50%;
+        top: -3.5vw;
+        margin-left: -22.8vw;
+    }
+
+    h1 {
+        margin-top: 5vw;
+        font-size: 5vw;
+    }
+
+    .efternavn {
+        margin-left: -10px;
+    }
+
+
+    #menu {
+        transform: none;
+        transition: transform 0s;
+        padding: 0vw;
+        margin-top: 1vw;
+        position: static;
+        background-color: transparent;
+        line-height: 5.5vw;
+
+
+    }
+
+    #menu a {
+        padding-right: 0;
+    }
+
+
+
+    #menu li {
+        display: inline-block;
+        font-size: 1.2vw;
+
+    }
+
+    /* nth = number */
+    #menu li:nth-child(2) {
+        margin-left: 7vw;
+        margin-right: 4vw;
+    }
+
+    #menu li:nth-child(4) {
+        margin-left: 54.8vw;
+    }
+
+    #menu li:first-child {
+        display: none;
+    }
+
+    .selfie img {
+        margin-left: 1vw;
+        margin-right: 10vw;
+
+    }
+
+    .about_tekst {
+        margin-right: 1vw;
+        margin-left: 7vw;
+        font-size: 1.3vw;
+        margin-top: -3.1vw;
+    }
+
+    .about_overskrift {
+        display: inherit;
+        position: relative;
+
+    }
+
+    .me {
+        position: absolute;
+        left: 54.6vw;
+        top: -6vw;
+    }
+
+    .about {
+        position: absolute;
+        left: 40vw;
+        top: -11.5vw;
+
+    }
+
+    .about_wrapper {
+        margin-top: 31vw;
+    }
+
+    .contact_tekst {
+        font-size: 1.5vw;
+        text-align: justify;
+        margin-left: 39vw;
+
+    }
+
+    h2 {
+        font-size: 4.7vw;
+    }
+
+    .contact_tekst a {
+        text-decoration: none;
+    }
+
+    .contact_tekst a img {
+        width: 40px;
+        margin: -1vw;
+    }
+
+
+    /*portfolio*/
+
+    .portfolio_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -2vw;
+    }
+
+    .tekst {
+        flex-basis: 200px;
+        flex-grow: 1;
+        margin: 2vw;
+        margin-left: 6vw;
+        text-align: left;
+        line-height: 1.8vw;
+    }
+
+    .billede {
+        flex-basis: 500px;
+        flex-grow: 1;
+        margin: 3.4vw 6vw 2vw 2vw;
+    }
+
+    .billede video {
+        height: auto;
+    }
+
+    footer {
+        font-size: 1vw;
+    }
+
 }
